@@ -4,13 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
     <script src="index.js"></script>
-
+<style>
+    li {
+        margin-bottom: 10px;
+    }
+    li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+    }
+</style>
 </head>
 <body>
     <h1>My shopping list</h1>
-    <p>Enter a new item: 
-        <input type="text" title="Input" > 
+    
+    <form>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item" >
         <button>Add item</button>
-    </p>
+    </form>
+    <ul>
+
+    </ul>
 </body>
 </html>
