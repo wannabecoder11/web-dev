@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etc-a-Sketch</title>
+    <style>
+        div.container {
+            margin: 1px;
+            height: 960px;
+            width: 960px;
+            border-radius: 2px;
+            border-width: 2px;
+            border-style: solid;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        div.square {
+            border: black solid 1px;
+            background-color: grey;
+            width: 58px;
+            height: 58px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span>Square Density</span>
+    <input type="text">
+    <button>Resize</button>
+</div>
+  <div class="container">
+  </div>  
+</body>
+
+<script src="index.js"></script>
+</html>
