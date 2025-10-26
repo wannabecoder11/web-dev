@@ -10,7 +10,11 @@ button.addEventListener("click", redrawSquares);
 
 
 function redrawSquares() {
-    drawSquares(`${input.value}`);
+    if (input.value < 100 & input.value > 2) {
+        drawSquares(`${input.value}`)
+    } else {
+        console.log("Please enter a value between 2 and 100")
+    }
 
 };
 
@@ -27,13 +31,15 @@ function drawSquares(s) {
     };
 
     
-    const squares = document.querySelectorAll("div.square"); // array like object of all squares created above
+    //const squares = document.querySelectorAll("div.square"); // array like object of all squares created above
+    // function colorSquare(event) {
+    // }
+    // squares.forEach((sq) => {
+    //         sq.addEventListener("mouseover", colorSquare);
 
-    squares.forEach((sq) => {
-                sq.addEventListener("mouseover", (event) => {
-                        sq.style.backgroundColor = "red";
-                    })   
-            });
-    
-};
-
+    // added event listener of the parent node, the container iteself, and then ran the function on the target/square, this saves a lot of memory
+    container.addEventListener("mouseover", (event) => {
+        let target = event.target;
+            target.style.backgroundColor = "red";
+    })
+    };
