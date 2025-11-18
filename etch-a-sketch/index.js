@@ -42,4 +42,4 @@ function drawSquares(s) {
         let target = event.target;
             target.style.backgroundColor = "red";
     })
-    };
+};
