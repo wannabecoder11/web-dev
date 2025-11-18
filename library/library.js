@@ -20,16 +20,17 @@ createBook("GoT", "G R R Martin")
 createBook("Lord of the Rings", "Tolkins")
 
 function displayBooks() {
+
+        const tableRows = document.getElementById("bookRows")
+        tableRows.replaceChildren();
     for (key in books) {
         // console.table(books[key]);
-        const tableRows = document.getElementById("bookRows")
         const newRow = document.createElement("tr");
 
         const newRowHeader = document.createElement("th");
         const newBookCell = document.createElement("td");
         const newAuthorCell = document.createElement("td");
         const newIdCell = document.createElement("td");
-
         tableRows.appendChild(newRow)
         newRowHeader.textContent = `${key}`;
         newBookCell.textContent = `${books[key].name}`
@@ -43,4 +44,26 @@ function displayBooks() {
 
     }
 }
+
+const newform = document.querySelector("form")
+const openFormButton = document.getElementById("openForm")
+openFormButton.addEventListener("click", (e) => { 
+    console.log("button pressed")
+    newform.toggleAttribute("hidden",)})
+
+
+const submitButton = document.getElementById("submit")
+
+const bookTitle = document.getElementById("title")
+const bookAuthor = document.getElementById("author")
+submitButton.addEventListener("click", (e) => {
+    createBook(bookTitle.value, bookAuthor.value);
+    console.log(`${bookTitle.value} ${bookAuthor.value}`)
+    e.preventDefault()
+    
+    displayBooks()
+}
+
+)
+   
 displayBooks()
